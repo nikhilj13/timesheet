@@ -13,7 +13,7 @@ config :timesheet, TimesheetWeb.Endpoint, server: true,
 
 # Configure your database
 config :timesheet, Timesheet.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "timesheet",
+  password: "efoothoo7Oom",
   database: "timesheet_prod",
   pool_size: 15
