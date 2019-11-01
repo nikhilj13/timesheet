@@ -11,7 +11,7 @@ config :logger, level: :warn
 
 # Configure your database
 config :timesheet, Timesheet.Repo,
-  username: "nikhil",
+  username: "timesheet",
   password: "efoothoo7Oom",
   database: "timesheet_test",
   hostname: "localhost",

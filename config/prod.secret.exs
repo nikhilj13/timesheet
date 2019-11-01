@@ -8,7 +8,7 @@ use Mix.Config
 # file or create a script for recreating it, since it's
 # kept out of version control and might be hard to recover
 # or recreate for your teammates (or yourself later on).
-config :timesheet, TimesheetWeb.Endpoint,
+config :timesheet, TimesheetWeb.Endpoint, server: true,
   secret_key_base: "3Ava1ed4dNR00oC7ZxBMa2IEpCVHr5E7fiW+0KagJn9o/dzBJKUcAGftN5Qfzma5"
 
 # Configure your database
