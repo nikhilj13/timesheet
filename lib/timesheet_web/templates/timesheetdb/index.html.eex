@@ -1,0 +1,58 @@
+<h1>Listing Timesheetdbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Job id1</th>
+      <th>Job id2</th>
+      <th>Job id3</th>
+      <th>Job id4</th>
+      <th>Job id5</th>
+      <th>Job id6</th>
+      <th>Job id7</th>
+      <th>Job id8</th>
+      <th>Hours1</th>
+      <th>Hours2</th>
+      <th>Hours3</th>
+      <th>Hours4</th>
+      <th>Hours5</th>
+      <th>Hours6</th>
+      <th>Hours7</th>
+      <th>Hours8</th>
+      <th>Date</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for timesheetdb <- @timesheetdbs do %>
+    <tr>
+      <td><%= timesheetdb.job_id1 %></td>
+      <td><%= timesheetdb.job_id2 %></td>
+      <td><%= timesheetdb.job_id3 %></td>
+      <td><%= timesheetdb.job_id4 %></td>
+      <td><%= timesheetdb.job_id5 %></td>
+      <td><%= timesheetdb.job_id6 %></td>
+      <td><%= timesheetdb.job_id7 %></td>
+      <td><%= timesheetdb.job_id8 %></td>
+      <td><%= timesheetdb.hours1 %></td>
+      <td><%= timesheetdb.hours2 %></td>
+      <td><%= timesheetdb.hours3 %></td>
+      <td><%= timesheetdb.hours4 %></td>
+      <td><%= timesheetdb.hours5 %></td>
+      <td><%= timesheetdb.hours6 %></td>
+      <td><%= timesheetdb.hours7 %></td>
+      <td><%= timesheetdb.hours8 %></td>
+      <td><%= timesheetdb.date %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.timesheetdb_path(@conn, :show, timesheetdb) %></span>
+        <span><%= link "Edit", to: Routes.timesheetdb_path(@conn, :edit, timesheetdb) %></span>
+        <span><%= link "Delete", to: Routes.timesheetdb_path(@conn, :delete, timesheetdb), method: :delete, data: [confirm: "Are you sure?"] %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Timesheetdb", to: Routes.timesheetdb_path(@conn, :new) %></span>

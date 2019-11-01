@@ -61,7 +61,7 @@ config :phoenix, :plug_init_mode, :runtime
 
 # Configure your database
 config :timesheet, Timesheet.Repo,
-  username: "timesheet",
+  username: "nikhil",
   password: "efoothoo7Oom",
   database: "timesheet_dev",
   hostname: "localhost",

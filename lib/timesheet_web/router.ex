@@ -27,6 +27,8 @@ defmodule TimesheetWeb.Router do
     resources "/sessions/new/manager", ManagersController
 
     resources "/sessions/new/jobs", JobController
+
+    resources "/timesheetdbs", TimesheetdbController
   end
 
   # Other scopes may use custom stacks.

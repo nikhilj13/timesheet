@@ -1,0 +1,79 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :job_id1 %>
+  <%= text_input f, :job_id1 %>
+  <%= error_tag f, :job_id1 %>
+
+  <%= label f, :job_id2 %>
+  <%= text_input f, :job_id2 %>
+  <%= error_tag f, :job_id2 %>
+
+  <%= label f, :job_id3 %>
+  <%= text_input f, :job_id3 %>
+  <%= error_tag f, :job_id3 %>
+
+  <%= label f, :job_id4 %>
+  <%= text_input f, :job_id4 %>
+  <%= error_tag f, :job_id4 %>
+
+  <%= label f, :job_id5 %>
+  <%= text_input f, :job_id5 %>
+  <%= error_tag f, :job_id5 %>
+
+  <%= label f, :job_id6 %>
+  <%= text_input f, :job_id6 %>
+  <%= error_tag f, :job_id6 %>
+
+  <%= label f, :job_id7 %>
+  <%= text_input f, :job_id7 %>
+  <%= error_tag f, :job_id7 %>
+
+  <%= label f, :job_id8 %>
+  <%= text_input f, :job_id8 %>
+  <%= error_tag f, :job_id8 %>
+
+  <%= label f, :hours1 %>
+  <%= number_input f, :hours1, step: "any" %>
+  <%= error_tag f, :hours1 %>
+
+  <%= label f, :hours2 %>
+  <%= number_input f, :hours2, step: "any" %>
+  <%= error_tag f, :hours2 %>
+
+  <%= label f, :hours3 %>
+  <%= number_input f, :hours3, step: "any" %>
+  <%= error_tag f, :hours3 %>
+
+  <%= label f, :hours4 %>
+  <%= number_input f, :hours4, step: "any" %>
+  <%= error_tag f, :hours4 %>
+
+  <%= label f, :hours5 %>
+  <%= number_input f, :hours5, step: "any" %>
+  <%= error_tag f, :hours5 %>
+
+  <%= label f, :hours6 %>
+  <%= number_input f, :hours6, step: "any" %>
+  <%= error_tag f, :hours6 %>
+
+  <%= label f, :hours7 %>
+  <%= number_input f, :hours7, step: "any" %>
+  <%= error_tag f, :hours7 %>
+
+  <%= label f, :hours8 %>
+  <%= number_input f, :hours8, step: "any" %>
+  <%= error_tag f, :hours8 %>
+
+  <%= label f, :date %>
+  <%= date_select f, :date %>
+  <%= error_tag f, :date %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>

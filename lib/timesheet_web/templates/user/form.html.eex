@@ -5,33 +5,6 @@
     </div>
   <% end %>
 
-  <table class="table table-striped">
-    <%= for i <- (1..8) do %>
-    <tr>
-      <td>
-        <%= label f, :hours %>
-        <%= number_input f, :hours, class: "form-control" %>
-        <%= error_tag f, :hours %>
-      </td>
-      <td>
-        <%= label f, :note %>
-        <%= text_input f, :note, class: "form-control" %>
-        <%= error_tag f, :note %>
-      </td>
-      <td>
-        <%= label f, :worker %>
-        <br>
-        <%= @current_user.id %>
-      </td>
-      <td>
-        <%= label f, :job %>
-        <%= select f, :job, Time1.Jobs.get_job_ids(), class: "form-control" %>
-        <%= error_tag f, :job %>
-      </td>
-    </tr>
-    <% end %>
-  </table>
-
   <div>
     <%= submit "Save", class: "btn btn-primary" %>
   </div>

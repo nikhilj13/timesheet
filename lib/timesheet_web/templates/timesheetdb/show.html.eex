@@ -1,0 +1,93 @@
+<h1>Show Timesheetdb</h1>
+
+<ul>
+
+  <li>
+    <strong>Job id1:</strong>
+    <%= @timesheetdb.job_id1 %>
+  </li>
+
+  <li>
+    <strong>Job id2:</strong>
+    <%= @timesheetdb.job_id2 %>
+  </li>
+
+  <li>
+    <strong>Job id3:</strong>
+    <%= @timesheetdb.job_id3 %>
+  </li>
+
+  <li>
+    <strong>Job id4:</strong>
+    <%= @timesheetdb.job_id4 %>
+  </li>
+
+  <li>
+    <strong>Job id5:</strong>
+    <%= @timesheetdb.job_id5 %>
+  </li>
+
+  <li>
+    <strong>Job id6:</strong>
+    <%= @timesheetdb.job_id6 %>
+  </li>
+
+  <li>
+    <strong>Job id7:</strong>
+    <%= @timesheetdb.job_id7 %>
+  </li>
+
+  <li>
+    <strong>Job id8:</strong>
+    <%= @timesheetdb.job_id8 %>
+  </li>
+
+  <li>
+    <strong>Hours1:</strong>
+    <%= @timesheetdb.hours1 %>
+  </li>
+
+  <li>
+    <strong>Hours2:</strong>
+    <%= @timesheetdb.hours2 %>
+  </li>
+
+  <li>
+    <strong>Hours3:</strong>
+    <%= @timesheetdb.hours3 %>
+  </li>
+
+  <li>
+    <strong>Hours4:</strong>
+    <%= @timesheetdb.hours4 %>
+  </li>
+
+  <li>
+    <strong>Hours5:</strong>
+    <%= @timesheetdb.hours5 %>
+  </li>
+
+  <li>
+    <strong>Hours6:</strong>
+    <%= @timesheetdb.hours6 %>
+  </li>
+
+  <li>
+    <strong>Hours7:</strong>
+    <%= @timesheetdb.hours7 %>
+  </li>
+
+  <li>
+    <strong>Hours8:</strong>
+    <%= @timesheetdb.hours8 %>
+  </li>
+
+  <li>
+    <strong>Date:</strong>
+    <%= @timesheetdb.date %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.timesheetdb_path(@conn, :edit, @timesheetdb) %></span>
+<span><%= link "Back", to: Routes.timesheetdb_path(@conn, :index) %></span>
