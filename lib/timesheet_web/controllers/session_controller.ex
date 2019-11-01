@@ -1,0 +1,31 @@
+defmodule TimesheetWeb.SessionController do
+  use TimesheetWeb, :controller
+
+  def new(conn, _params) do
+    render(conn, "new.html")
+  end
+
+  def create(conn, %{"email" => email, "password" => password, "type" => type}) do
+    user = Timesheet.Users.authenticate(email, password, type)
+    IO.inspect user, label: "User in session_controller create"
+    if user do
+      conn
+      |> put_session(:user_id, user.id)
+      |> put_session(:type, type)
+      |> put_flash(:info, "Welcome back #{user.email}")
+      |> redirect(to: Routes.user_path(conn, :show, user.id))
+    else
+      conn
+      |> put_flash(:error, "Login failed.")
+      |> redirect(to: Routes.page_path(conn, :index))
+    end
+  end
+
+  def delete(conn, _params) do
+    conn
+    |> delete_session(:user_id)
+    |> delete_session(:type)
+    |> put_flash(:info, "Logged out.")
+    |> redirect(to: Routes.page_path(conn, :index))
+  end
+end

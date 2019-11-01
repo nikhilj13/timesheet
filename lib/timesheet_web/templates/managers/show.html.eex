@@ -1,0 +1,23 @@
+<h1>Show Managers</h1>
+
+<ul>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @managers.email %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @managers.name %>
+  </li>
+
+  <li>
+    <strong>Password:</strong>
+    <%= @managers.password %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.managers_path(@conn, :edit, @managers) %></span>
+<span><%= link "Back", to: Routes.managers_path(@conn, :index) %></span>

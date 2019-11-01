@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-sm-12">
+    <%= form_for @conn, Routes.session_path(@conn, :create), fn f -> %>
+      <div class="form-group">
+        <%= label f, :email %>
+        <%= text_input f, :email, class: "form-control" %>
+        <%= error_tag f, :email %>
+        <br />
+        <%= label f, :password %>
+        <%= password_input f, :password, class: "form-control" %>
+        <%= error_tag f, :password %>
+        <br />
+        <div class="radio-buttons">
+          Login as :&nbsp;&nbsp;&nbsp;
+          <%= radio_button f, :type, "worker", checked: true %> Worker
+          <div class="radio-button-left-padding">
+            <%= radio_button f, :type, "manager"%> Manager
+          </div>
+        </div>
+      </div>
+
+      <div class="center-button">
+        <%= submit "Log In", class: "btn btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
