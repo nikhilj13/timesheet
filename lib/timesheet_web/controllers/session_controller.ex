@@ -7,7 +7,6 @@ defmodule TimesheetWeb.SessionController do
 
   def create(conn, %{"email" => email, "password" => password, "type" => type}) do
     user = Timesheet.Users.authenticate(email, password, type)
-    IO.inspect user, label: "User in session_controller create"
     if user do
       conn
       |> put_session(:user_id, user.id)

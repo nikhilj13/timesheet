@@ -29,7 +29,7 @@ defmodule Timesheet.Timesheetdbs.Timesheetdb do
   @doc false
   def changeset(timesheetdb, attrs) do
     timesheetdb
-    |> cast(attrs, [:job_id1, :job_id2, :job_id3, :job_id4, :job_id5, :job_id6, :job_id7, :job_id8, :hours1, :hours2, :hours3, :hours4, :hours5, :hours6, :hours7, :hours8, :date, user_id])
-    |> validate_required([:job_id1, :job_id2, :job_id3, :job_id4, :job_id5, :job_id6, :job_id7, :job_id8, :hours1, :hours2, :hours3, :hours4, :hours5, :hours6, :hours7, :hours8, :date, user_id])
+    |> cast(attrs, [:job_id1, :job_id2, :job_id3, :job_id4, :job_id5, :job_id6, :job_id7, :job_id8, :hours1, :hours2, :hours3, :hours4, :hours5, :hours6, :hours7, :hours8, :date, :user_id])
+    |> validate_required([:job_id1, :job_id2, :job_id3, :job_id4, :job_id5, :job_id6, :job_id7, :job_id8, :hours1, :hours2, :hours3, :hours4, :hours5, :hours6, :hours7, :hours8, :date, :user_id])
   end
 end

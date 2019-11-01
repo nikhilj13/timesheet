@@ -117,11 +117,8 @@ defmodule Timesheet.Users do
   end
 
   def authenticate(email, password, type) do
-    IO.inspect password, label: "Password email in authenticate"
     if type === "worker" do
       user = Repo.get_by(User, email: email)
-      IO.inspect user, label: "Worker in authenticate"
-      IO.inspect Argon2.check_pass(user, password), label: "Authentication Result"
       case Argon2.check_pass(user, password) do
         {:ok, user} -> user
         _ -> nil

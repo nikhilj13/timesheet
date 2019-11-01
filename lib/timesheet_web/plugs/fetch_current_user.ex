@@ -5,7 +5,6 @@ defmodule TimesheetWeb.Plugs.FetchCurrentUser do
 
   def call(conn, _args) do
     user = Timesheet.Users.get_user(get_session(conn, :user_id) || -1, get_session(conn, :type) || -1)
-    IO.inspect user, label: "User in call fetch cureent user:"
     if user do
       assign(conn, :current_user, user)
     else
