@@ -2,4 +2,4 @@
 
 source ./prod-env.sh
 
-build/prod/rel/timesheet/bin/timesheet start
+_build/prod/rel/timesheet/bin/timesheet start
