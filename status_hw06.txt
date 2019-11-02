@@ -1,0 +1,36 @@
+
+Web Dev Fall 2019 HW06 Status
+
+Answer the following questions:
+
+
+1. What's your name?
+Nikhil Nikhil
+
+
+2. What's the URL of the github repo with your work for this HW?
+https://github.com/nikhilj13/timesheet
+
+
+3. What's the version number of your github release?
+2642cf210903e99eecac42386c446a84b88d2a94
+
+
+4. What's the URL that you deployed to?
+time1.cs5610nikhil.website
+
+
+5. Is your app functionality complete? If not, what's missing?
+No. I implemented the login part and created sessions. I was not able to work on this assignment because of some personal issues.
+
+
+6. Is your app properly deployed? If not, what went wrong?
+No, I tried to deploy it and it worked at first and then when I pulled in my updated code it stopped working. I checked the error logs for nginx and it said 'no live upstreams while connecting to upstream'.
+
+
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Development
+ - Deployment
+ - Submission
